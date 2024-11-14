@@ -19,9 +19,7 @@ public class EjEx1 {
         System.out.println("---------------------");
         ImprArray(cadena);
 
-        // Imprimir el arreglo con las palabras y el orden invertido
-        System.out.println("---------------------");
-        ImprArray(darVueltaArr(vueltaPalabras(cadena)));
+        
     }
 
     static String[] mySplit(String e, String a) {
@@ -54,35 +52,7 @@ public class EjEx1 {
         return arrayString; // pasamos de un String a un array de Strings
     } // este metodo separa un string en un array usando un delimitador
 
-    static String arrRev(String e) {
-        
-        String aux = ""; // Creamos una variable 'aux' que almacenará los caracteres invertidos del string.
-        for (int i = e.length() - 1; i >= 0; i--) {
-            aux = aux + e.charAt(i);  // Concatenamos cada carácter de 'e' en orden inverso a 'aux'
-        }
-
-        return aux; // devolvemos aux que contiene el string al reves 
-    } // metodo que le entra un string y te devuelve el mismo pero del reves 
-
-    static String[] vueltaPalabras(String[] e) {
-        String[] aux = new String[e.length]; // creamos un array del mismo tamaño que le entra
-        // Recorremos el array  para invertir cada palabra individualmente
-        for (int i = 0; i < e.length; i++) {
-            aux[i] = arrRev(e[i]);  // Usamos el método arrRev para invertir la palabra en e[i] y asignarla a aux[i]
-        }
-        return aux; // Devolvemos el arreglo 'aux' con las palabras invertidas
-    }
-
-    static String[] darVueltaArr(String[] e) {
-        int n = e.length; // creamos una variable del tamaño de e
-        String[] reversa = new String[n]; //creamos un array del tamaño de e
-        // recorremos el for para colocar los string del reves en el nuevo array 
-        for (int i = 0; i < n; i++) {
-            reversa[i] = e[n - 1 - i];
-        }
-        
-        return reversa;
-    } // invertir disposicion del array
+   // invertir disposicion del array
 
     static void ImprArray(String[] e) {
         for (int i = 0; i < e.length; i++) {
